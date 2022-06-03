@@ -11,7 +11,11 @@
           anonymous
         <% end %>
       </h4>
-      <img src="<%= post["image"] %>" class="img-fluid">
+      <% if post.uploaded_image.attached? #if there is an uploaded image attached%>
+        <img src="<%= url_for(post.uploaded_image)%>" class="img-fluid">
+      <%else #otherwise, show the old image that was there before%>
+        <img src="<%= post["image"] %>" class="img-fluid">
+      <%end%>
       <p><%= post["body"] %></p>
     </div>
   <% end %>
