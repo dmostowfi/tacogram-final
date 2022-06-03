@@ -22,6 +22,6 @@ group :development do #these 2 pieces of software will only be installed in dev 
   #sqlite 3 is what allows us to communicate with development.sqlite3 file
 end
 
-group :production: do #i want this to be stalled only in prod environment
+group :production do #i want this to be stalled only in prod environment
   gem "pg" #this is the ruby interface for the posgres software
 end
