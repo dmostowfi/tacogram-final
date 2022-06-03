@@ -2,6 +2,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    respond_to do |format| #this is now capable of rendering both html and json
+        format.html
+        format.json do #if its json, show the post index as json format
+          render :json => @posts
+        end
+      end
   end
 
   def new
