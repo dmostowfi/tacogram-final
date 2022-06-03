@@ -19,6 +19,7 @@ group :development do #these 2 pieces of software will only be installed in dev 
   gem "tabulo"
   gem "web-console"
   gem "sqlite3", "~> 1.4" #SQL software - we don't use sqlite3 in prod environment
+  #sqlite 3 is what allows us to communicate with development.sqlite3 file
 end
 
 group :production: do #i want this to be stalled only in prod environment
